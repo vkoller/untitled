@@ -23,9 +23,9 @@ int main(void) {
     float income_limit, st_tax, max_tax, total_income = 0;
     printf("Enter your yearly income limit: ");
     scanf("%f", &income_limit);
-    printf("Enter your tax rate for standart income: ");
+    printf("Enter your tax rate for standart income (for example, 0.13): ");
     scanf("%f", &st_tax);
-    printf("Enter your monthly tax rate for higher income: ");
+    printf("Enter your monthly tax rate for higher income (for example, 0.25): ");
     scanf("%f", &max_tax);
 
     for (int i = 0; i < 12; i++) {
