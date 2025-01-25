@@ -19,7 +19,7 @@ int read_integer() {
         } else if (input < 0) {                             // if it's a negative number we stop the program
             break;
         }
-    } while (input < 1);                                   // cycle will stop
+    } while (input < 1);                                   // cycle will continue
         return input;
     }
 
