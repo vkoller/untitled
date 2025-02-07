@@ -38,15 +38,15 @@ bool read_positive(int *pnumber) {
 }
 
 int main(void) {
-    int pnumber;        //variable for pointer for variable "number"
-    bool vastaus = read_positive(&pnumber); //call the function and send the address of pointer as the argument for function
+    int number;
+    bool vastaus = read_positive(&number); //call the function and send the address of variable as the argument for function
 
     while (vastaus) {       //loop works until function returns true
             // printf("vastaus = %d\n", vastaus);      //testing
             // printf("The number is: %d\n", pnumber); //testing
-            int matrix_number = (pnumber * 2) + 20;          //the number created by the "Matrix"
+            int matrix_number = (number * 2) + 20;          //created by the "Matrix", number here has been initialized in the function read_positive
             printf("My number is %d\n", matrix_number);
-            vastaus = read_positive(&pnumber);      //getting new value for "number"
+            vastaus = read_positive(&number);      //getting new value for "number"
     }
 
     //when function returns false, loop stops and game is over
