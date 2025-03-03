@@ -33,17 +33,19 @@ int main() {
 
         }
 
-        fclose(your_file);
+    fclose(your_file);
 
     for (int i = 0; i < line_num; i++) {
         for (int j = 0; lines[i][j] != '\0'; j++) {
             lines[i][j] = toupper((unsigned char)lines[i][j]);
         }
     }
-
-    printf("Uppercase letters are : \n");
+    your_file = fopen(filename, "a");
+    fprintf(your_file,"\n\nUppercase letters are : \n");
     for (int i = 0; i < line_num; i++) {
-        printf("%s\n", lines[i]);
+        fprintf(your_file,"%s\n", lines[i]);
     }
+
+    fclose(your_file);
 
 }
